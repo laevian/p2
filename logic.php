@@ -8,16 +8,20 @@
 	$rawdata = file_get_contents("http://www.ccc.commnet.edu/grammar/misspelled_words.htm");
 
 	$dom = new domDocument; 
-
 	@$dom->loadHTML($rawdata); # loads the HTML into the domDocument
-
-	$tables = $dom->getElementsByTagName('table')->item(3); # grabs all of the tables from the HTML
+    $xpath = new DOMXPath($dom);
+	$tables = $xpath->query('//table')->item(3);
+	
+	#$tables = $dom->getElementsByTagName('table')->item(3); # grabs all of the tables from the HTML
+	
+	
 	
 /*	foreach ($tables as $data) { # cycles through $tables to pull out the word table
 		$wordTable = (array)$tables;
 	}*/
 
 	$wordList = $tables->nodeValue; # dumps DOMElement data into a string
+	
 	$words = explode(" ", $wordList); # dumps string data into an array
 	$wordCount = count($words); #upper limit for rand
 
