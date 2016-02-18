@@ -13,11 +13,11 @@
 
 	$tables = $dom->getElementsByTagName('table'); # grabs all of the tables from the HTML
 	
-	#foreach ($tables as $index => $data) { # cycles through $tables to pull out the word table
-		$wordTable = $tables[3];
-	#}
+	foreach ($tables as $data) { # cycles through $tables to pull out the word table
+		$wordTable = $tables[3]->nodeValue;
+	}
 
-	$wordList = $wordTable->nodeValue; # dumps DOMElement data into a string
+	$wordList = $wordTable; # dumps DOMElement data into a string
 	$words = explode(" ", $wordList); # dumps string data into an array
 	$wordCount = count($words); #upper limit for rand
 
