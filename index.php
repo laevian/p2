@@ -26,13 +26,17 @@
 		
 		<div class="passwordOutput"><?php echo $password ?></div><br>
 		
-		<div class="errorOutput"><?php echo @$error; ?></div><br><br>
+		<div class="errorOutput"><?php echo @$error; ?></div><br>
 		
 		<form action="index.php" method="GET">
-			<label>Number of Words</label><br><input type="text" name="numOfWords" maxlength=1 size="2"> (9 max)<br><br>
-			<input type="checkbox" name="symbol" value="hasSymbol">Add Symbol<br>
-			<input type="checkbox" name="number" value="hasNumber">Add Number<br>
-			<br>
+			<label>Number of Words</label><br>
+			<input type="text" name="numOfWords" maxlength=1 size="2"> (9 max)
+			<label><br><br>
+				<input type="checkbox" name="symbol" value="hasSymbol">Add Symbol
+			</label><br>
+			<label>
+				<input type="checkbox" name="number" value="hasNumber">Add Number
+			</label><br><br>
 			<input type="submit" value="Generate Password">
 		</form>			
 	
