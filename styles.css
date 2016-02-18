@@ -1,0 +1,81 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	background-image: url("images/waterfall.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	font-family: "Segoe Ui Light", "Tahoma", sans-serif;
+	box-sizing: border-box;
+}
+
+h1
+{
+	font-size: 3rem;
+	font-weight: 200;
+	display: inline-block;
+	margin-bottom: 2rem;
+	margin-top: 0;
+}
+
+.container
+{
+	z-index: 3;
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 80%;
+	padding: 3rem;
+	box-sizing: border-box;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	color: #ffffff;
+}
+
+.passwordOutput
+{
+	width: 50%;
+	padding: 1%;
+	font-size: 1.2rem;
+	background-color: rgba(255, 255, 255, 0.8);
+	font-weight: 700;
+	color: #000000;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.errorOutput
+{
+	font-size: .9rem;
+	color: #ff0000;
+}
+
+.bodytext
+{
+	width: 70%;
+	display: inline-block;
+	float: left;
+	margin: 0 5% 5% 0;
+	box-sizing: border-box;
+}
+
+.projectlinks
+{
+position: absolute;
+bottom: 0rem;
+right: -10rem;
+padding: 1rem;
+background-color:  rgba(0, 0, 0, 0.8);
+}
+
+.bold
+{
+	font-weight: 600;
+}
+
+a
+{
+color: #ffffff;
+text-decoration: none;
+border-bottom: 1px dashed #ffffff;
+}
