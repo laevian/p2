@@ -11,13 +11,13 @@
 
 	@$dom->loadHTML($rawdata); # loads the HTML into the domDocument
 
-	$tables = $dom->getElementsByTagName('table'); # grabs all of the tables from the HTML
+	$tables = $dom->getElementsByTagName('table')->item(3); # grabs all of the tables from the HTML
 	
-	foreach ($tables as $data) { # cycles through $tables to pull out the word table
-		$wordTable = $tables[3]->nodeValue;
-	}
+/*	foreach ($tables as $data) { # cycles through $tables to pull out the word table
+		$wordTable = (array)$tables;
+	}*/
 
-	$wordList = $wordTable; # dumps DOMElement data into a string
+	$wordList = $tables->nodeValue; # dumps DOMElement data into a string
 	$words = explode(" ", $wordList); # dumps string data into an array
 	$wordCount = count($words); #upper limit for rand
 
