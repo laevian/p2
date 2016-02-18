@@ -7,6 +7,7 @@ body
 	background-repeat: no-repeat;
 	font-family: "Segoe Ui Light", "Tahoma", sans-serif;
 	box-sizing: border-box;
+	overflow: hidden;
 }
 
 h1
