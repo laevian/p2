@@ -13,9 +13,9 @@
 
 	$tables = $dom->getElementsByTagName('table'); # grabs all of the tables from the HTML
 	
-	foreach ($tables as $index => $data) { # cycles through $tables to pull out the word table
+	#foreach ($tables as $index => $data) { # cycles through $tables to pull out the word table
 		$wordTable = $tables[3];
-	}
+	#}
 
 	$wordList = $wordTable->nodeValue; # dumps DOMElement data into a string
 	$words = explode(" ", $wordList); # dumps string data into an array
